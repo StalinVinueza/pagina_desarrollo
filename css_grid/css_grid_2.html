@@ -2,13 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Grid</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "logo menu menu menu"
+                "imagen imagen imagen imagen"   
+                "contenido contenido contenido lado_1"
+                "contenido contenido contenido lado_2";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 1fr auto auto;
+            height: 100vh;
+            gap: 10px;
+        }
+
+        .logo {
+            grid-area: logo;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            
+        }
+
+        .imagen {
+            grid-area: imagen;
+            background-color: #af4c96;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            
+        }
+
+        .menu {
+            grid-area: menu;
+            background-color: #f4b41a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            text-align: center;
+        }
+            
+        
+
+        .contenido {
+            grid-area: contenido;
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+            
+        }
+
+        .lado_1 {
+            grid-area: lado_1;
+            background-color: #9C27B0;
+            color: white;
+            padding: 10px;
+            
+        }
+
+        .lado_2 {
+            grid-area: lado_2;
+            background-color: #FF5722;
+            color: white;
+            padding: 10px;
+          
+        }
+        
     </style>
 </head>
 <body>
-  
+    <div class="grid-container">
+        <div class="logo">Logo</div>
+        <div class="imagen">Imagen</div>
+        <div class="menu">Menu</div>
+        <div class="contenido">Contenido</div>
+        <div class="lado_1">Lado 1</div>
+        <div class="lado_2">Lado 2</div>
+    </div>
 </body>
 </html>

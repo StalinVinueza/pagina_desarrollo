@@ -3,12 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive CSS Grid</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "logo logo menu menu"
+                "imagen imagen imagen imagen"   
+                "tienda contenido contenido producto"
+                "tienda contenido2 contenido2 producto2"
+                "footer footer footer footer";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 200px auto auto 100px;
+            height: 100vh;
+            gap: 10px;
+        }
+
+        .logo {
+            grid-area: logo;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .imagen {
+            grid-area: imagen;
+            background-color: #af4c96;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+        }
+
+        .menu {
+            grid-area: menu;
+            background-color: #f4b41a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .contenido {
+            grid-area: contenido;
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+        }
+        .contenido2 {
+            grid-area: contenido2;
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+        }
+        .tienda {
+            grid-area: tienda;
+            background-color: #9C27B0;
+            color: white;
+            padding: 10px;
+        }
+
+        .producto {
+            grid-area: producto;
+            background-color: #FF5722;
+            color: white;
+            padding: 10px;
+        }
+        .producto2 {
+            grid-area: producto2;
+            background-color: #FF5722;
+            color: white;
+            padding: 10px;
+        }
+
+
+        .footer {
+            grid-area: footer;
+            background-color: #cab01d;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+        }
 
     </style>
 </head>
 <body>
-  
+    <div class="grid-container">
+        <div class="logo">Logo</div>
+        <div class="imagen">Imagen</div>
+        <div class="menu">Menu</div>
+        <div class="tienda">Tienda</div>
+        <div class="contenido">Descripción Contenido</div>
+        <div class="producto">ImagenProducto</div>
+        <div class="contenido2">Descripción Contenido</div>
+        <div class="producto2">Imagen Producto</div>
+        <div class="footer">Footer</div>
+    </div>
 </body>
 </html>
+
